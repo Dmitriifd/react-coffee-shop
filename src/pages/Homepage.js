@@ -1,8 +1,17 @@
+import Card from 'components/card/Card'
 import Button from 'components/UI/button/Button'
 import Decor from 'components/UI/decor/Decro'
-import product from '../assets/img/product-1.jpg';
+import img1 from '../assets/img/product-1.jpg'
+import img2 from '../assets/img/product-2.jpg'
+import img3 from '../assets/img/product-3.jpg'
 
 const Homepage = () => {
+	const data = [
+		{ title: 'Solimo Coffee Beans 2 kg', image: img1, price: '10.73$', country: 'Brazil' },
+		{ title: 'Presto Coffee Beans 1 kg', image: img2, price: '15.99$', country: 'Kenya' },
+		{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia' },
+	]
+
 	return (
 		<>
 			<section className='intro'>
@@ -43,13 +52,9 @@ const Homepage = () => {
 				<div className='goods__container container'>
 					<h2 className='goods__title'>Our best</h2>
 					<ul className='about__list'>
-						<li className='about__item card'>
-							<a className='about__link card__link' href='#'>
-								<img className='card__img' src={product} alt='img' />
-								<h3 className='card__title'>Solimo Coffee Beans 2 kg</h3>
-								<p className='card__price'>10.73$</p>
-							</a>
-						</li>
+						{data.map((item) => (
+							<Card {...item} />
+						))}
 					</ul>
 				</div>
 			</section>

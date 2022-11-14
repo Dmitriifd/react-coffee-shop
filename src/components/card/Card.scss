@@ -1,0 +1,25 @@
+.card {
+}
+
+.card__img {
+ 
+	margin-bottom: 15px;
+}
+
+.card__title {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 10px;
+}
+
+.card__price {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: right;
+  padding-right: 10px;
+	color: #000000;
+}
