@@ -11,8 +11,8 @@ const setActive = ({ isActive }) => (isActive ? 'menu__link menu__link-active' :
 const Header = () => {
 
   const items = [
-		{ value: 'Our coffee', to: '/about' },
-		{ value: 'For your pleasure', to: '/contacts' },
+		{ value: 'Our coffee', to: '/coffee' },
+		{ value: 'For your pleasure', to: '/goods' },
 	]
 
   const [menuActive, setMenuActive] = useState(false)
