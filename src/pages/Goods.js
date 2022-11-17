@@ -1,11 +1,12 @@
+import About from 'components/about/About'
+import PageHeader from 'components/page-header/PageHeader'
+import photo from '../assets/img/photo-2.jpg'
+
 const Goods = () => {
 	return (
 		<>
-			<section className='pleasure'>
-				<div className='pleasure__container container'>
-					<h1 className='pleasure__title'>pleasure</h1>
-				</div>
-			</section>
+			<PageHeader title='For your pleasure' />
+			<About photo={photo} title='About our goods' />
 		</>
 	)
 }
