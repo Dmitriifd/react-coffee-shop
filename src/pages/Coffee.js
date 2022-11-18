@@ -2,27 +2,42 @@ import photo from '../assets/img/photo.jpg'
 import About from 'components/about/About'
 import PageHeader from 'components/page-header/PageHeader'
 import ProductList from 'components/product-list/ProductList'
+import Filter from 'components/filter/Filter'
+import { useContext, useState } from 'react'
+import { DataContext } from 'context'
 
 const Coffee = () => {
+	const data = useContext(DataContext)
+
+  const [filter, setFilter] = useState('')
+
+	const filterPost = (data, filter) => {
+		switch (filter) {
+			case 'Brazil':
+				return data.filter(({country}) => country === filter)
+			case 'Kenya':
+				return data.filter(({country}) => country === filter)
+			case 'Columbia':
+				return data.filter(({country}) => country === filter)
+			default:
+				return data
+		}
+	}
+
+	const onFilterSelect = (filter) => {
+		setFilter(() => filter)
+	}
+
+  const filterData = filterPost(data, filter)
+  
 	return (
 		<>
 			<PageHeader title='Our Coffee' />
 			<About photo={photo} title='About our beans' />
 			<section className='products'>
 				<div className='products__container container'>
-					<div className='products__filter filter'>
-						<label className='filter__label'>
-							Lookiing for
-							<input className='filter__input' type='text' placeholder='start typing here...' />
-						</label>
-						<div className='filter__btns'>
-							<p className='filter__btns-label'>Or filter</p>
-							<button className='filter__btn'>Brazil</button>
-							<button className='filter__btn'>Kenya</button>
-							<button className='filter__btn'>Columbia</button>
-						</div>
-					</div>
-					<ProductList />
+					<Filter onFilterSelect={onFilterSelect} />
+					<ProductList data={filterData} />
 				</div>
 			</section>
 		</>
