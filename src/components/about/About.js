@@ -1,6 +1,6 @@
 import Decor from "components/UI/decor/Decro"
 
-const About = ({ photo, title }) => {
+const About = ({ photo, title, country, price }) => {
 	return (
 		<>
 			<section className='coffee'>
@@ -10,6 +10,7 @@ const About = ({ photo, title }) => {
 					</div>
 					<div className='coffee__info'>
 						<h2 className='coffee__title'>{title}</h2>
+						<p className='coffee__country'>{country}</p>
 						<div className='coffee__title-decor decor'>
 							<Decor fill={'#000'} />
 						</div>
@@ -19,6 +20,7 @@ const About = ({ photo, title }) => {
 							calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect
 							answered followed. At it went is song that held help face.
 						</div>
+						<p className='coffee__price'>{price}</p>
 					</div>
 				</div>
 			</section>

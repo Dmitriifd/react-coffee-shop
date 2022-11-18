@@ -1,46 +1,27 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import About from 'components/about/About'
+import PageHeader from 'components/page-header/PageHeader'
+import { DataContext } from 'context'
+import { useContext } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import photo from '../assets/img/photo-3.jpg'
 
 const SinglePage = () => {
-	const { id } = useParams()
 	const navigate = useNavigate()
-	const [post, setPost] = useState(null)
-
-	// назад на 1 страницу
-	const goBack = () => navigate(-1)
+	const { id } = useParams()
   
-	{/* Для главной лучше использовать Link */}
-	const goHome = () =>
-		navigate('/', {
-			replace: true,
-		})
+	const goBack = () => navigate(-1)
+	const data = useContext(DataContext)
 
-	useEffect(() => {
-		fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-			.then((res) => res.json())
-			.then((data) => setPost(data))
-	}, [id])
+	const { country, price } = data.find((item) => item.id === +id)
 
 	return (
-		<div className='container'>
-			Post id: {id}
-			<button className='btn' onClick={goBack}>
-				goBack
-			</button>
-			{/* Для главной лучше использовать Link */}
-			<button className='btn' onClick={goHome}>
-				goHome
-			</button>
-			{post && (
-				<>
-					<h1>{post.title}</h1>
-					<p>{post.body}</p>
-					<Link className='btn red' to={`/posts/${id}/edit`}>
-						Edit post
-					</Link>
-				</>
-			)}
-		</div>
+		<>
+			<PageHeader title='Our Coffee' />
+			<About photo={photo} title='About it' country={country} price={price} />
+			{/* <button className='btn' onClick={goBack}>
+				Назад
+			</button> */}
+		</>
 	)
 }
 

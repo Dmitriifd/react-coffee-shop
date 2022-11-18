@@ -1,6 +1,4 @@
-
 import photo from '../assets/img/photo.jpg'
-
 import About from 'components/about/About'
 import PageHeader from 'components/page-header/PageHeader'
 import ProductList from 'components/product-list/ProductList'
