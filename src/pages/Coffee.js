@@ -1,8 +1,9 @@
 
 import photo from '../assets/img/photo.jpg'
-import img from '../assets/img/coffee-img.jpg'
+
 import About from 'components/about/About'
 import PageHeader from 'components/page-header/PageHeader'
+import ProductList from 'components/product-list/ProductList'
 
 const Coffee = () => {
 	return (
@@ -23,56 +24,7 @@ const Coffee = () => {
 							<button className='filter__btn'>Columbia</button>
 						</div>
 					</div>
-					<ul className='products__items'>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-						<li className='products__item'>
-							<a className='products__link card' href='#'>
-								<img className='card__img' src={img} alt='img' />
-								<h3 className='card__title'>AROMISTICO Coffee 1 kg</h3>
-								<p className='card__country'>Brazil</p>
-								<p className='card__price'>6.99$</p>
-							</a>
-						</li>
-					</ul>
+					<ProductList />
 				</div>
 			</section>
 		</>

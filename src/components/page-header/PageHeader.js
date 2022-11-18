@@ -1,3 +1,5 @@
+import './PageHeader.scss'
+
 const PageHeader = ({title}) => {
 	return (
 		<section className='page-header'>

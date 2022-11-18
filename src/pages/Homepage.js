@@ -5,13 +5,16 @@ import img1 from '../assets/img/product-1.jpg'
 import img2 from '../assets/img/product-2.jpg'
 import img3 from '../assets/img/product-3.jpg'
 
-const Homepage = () => {
-	const data = [
-		{ title: 'Solimo Coffee Beans 2 kg', image: img1, price: '10.73$', country: 'Brazil' },
-		{ title: 'Presto Coffee Beans 1 kg', image: img2, price: '15.99$', country: 'Kenya' },
-		{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia' },
-	]
+export const data = [
+	{ title: 'Solimo Coffee Beans 2 kg', image: img1, price: '10.73$', country: 'Brazil' },
+	{ title: 'Presto Coffee Beans 1 kg', image: img2, price: '15.99$', country: 'Kenya' },
+	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia' },
+	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Brazil' },
+	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Kenya' },
+	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia' },
+]
 
+const Homepage = () => {
 	return (
 		<>
 			<section className='intro'>
@@ -52,9 +55,10 @@ const Homepage = () => {
 				<div className='goods__container container'>
 					<h2 className='goods__title'>Our best</h2>
 					<ul className='about__list'>
-						{data.map((item) => (
-							<Card {...item} />
-						))}
+						{data.map((item, i) => {
+							if (i >= 3) return
+							return <Card key={i} {...item} />
+						})}
 					</ul>
 				</div>
 			</section>
