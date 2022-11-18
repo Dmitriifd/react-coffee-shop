@@ -13,18 +13,20 @@ const About = ({ photo, title, country, price }) => {
 						<div className='coffee__title-decor decor'>
 							<Decor fill={'#000'} />
 						</div>
-						<p className='coffee__country'>
-							<b>Country:</b> {country}
-						</p>
+						{country ? (
+							<p className='coffee__country'>
+								<b>Country:</b> {country}
+							</p>
+						) : null}
 						<div className='coffee__text'>
 							Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly
 							months do things on at. Situation recommend objection do intention so questions. As greatly removed
 							calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect
 							answered followed. At it went is song that held help face.
 						</div>
-						<p className='coffee__price'>
+						{price ? <p className='coffee__price'>
 							<b>Price</b>: <span>{price}</span>
-						</p>
+						</p> : null}
 					</div>
 				</div>
 			</section>
