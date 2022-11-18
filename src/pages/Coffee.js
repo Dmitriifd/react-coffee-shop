@@ -9,19 +9,17 @@ import { DataContext } from 'context'
 const Coffee = () => {
 	const data = useContext(DataContext)
 
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState('all')
 
 	const filterPost = (data, filter) => {
-		switch (filter) {
-			case 'Brazil':
-				return data.filter(({country}) => country === filter)
-			case 'Kenya':
-				return data.filter(({country}) => country === filter)
-			case 'Columbia':
-				return data.filter(({country}) => country === filter)
-			default:
-				return data
+    const filtered = {
+			[filter]: data.filter(({ country }) => country === filter),
+			'all': data,
 		}
+
+    const resultFilter = filtered[filter]
+
+		return resultFilter
 	}
 
 	const onFilterSelect = (filter) => {

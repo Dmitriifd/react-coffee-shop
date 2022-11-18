@@ -1,14 +1,9 @@
-
 import { useState } from 'react'
 
 const Filter = (props) => {
-  const buttonsData = [
-		{ name: 'Brazil' },
-		{ name: 'Kenya'},
-		{ name: 'Columbia'},
-	]
+	const buttonsData = [{ name: 'all' }, { name: 'Brazil' }, { name: 'Kenya' }, { name: 'Columbia' }]
 
-  const [value, setValue] = useState('')
+	const [value, setValue] = useState('')
 
 	return (
 		<div className='products__filter filter'>
