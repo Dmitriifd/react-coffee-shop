@@ -9,8 +9,8 @@ const SinglePage = ({ data }) => {
 
 	return (
 		<>
-			<PageHeader title='Our Coffee' />
-			<About photo={photo} title='About it' country={country} price={price} />
+			<PageHeader title="Our Coffee" />
+			<About photo={photo} title="About it" country={country} price={price} />
 		</>
 	)
 }

@@ -9,18 +9,17 @@ import Menu from './Menu'
 const setActive = ({ isActive }) => (isActive ? 'menu__link menu__link-active' : 'menu__link')
 
 const Header = () => {
-
-  const items = [
+	const items = [
 		{ value: 'Our coffee', to: '/coffee' },
 		{ value: 'For your pleasure', to: '/goods' },
 	]
 
-  const [menuActive, setMenuActive] = useState(false)
+	const [menuActive, setMenuActive] = useState(false)
 
 	return (
-		<header className='header'>
-			<div className='header__container container'>
-				<Link to='/' className='header__logo logo'>
+		<header className="header">
+			<div className="header__container container">
+				<Link to="/" className="header__logo logo">
 					<Logo />
 					<span>Coffee house</span>
 				</Link>

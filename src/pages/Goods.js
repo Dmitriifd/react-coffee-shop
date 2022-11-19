@@ -5,8 +5,8 @@ import photo from '../assets/img/photo-2.jpg'
 const Goods = () => {
 	return (
 		<>
-			<PageHeader title='For your pleasure' />
-			<About photo={photo} title='About our goods' />
+			<PageHeader title="For your pleasure" />
+			<About photo={photo} title="About our goods" />
 		</>
 	)
 }

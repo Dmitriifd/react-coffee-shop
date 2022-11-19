@@ -4,9 +4,9 @@ import Footer from 'components/footer/Footer'
 
 const Layout = () => {
 	return (
-		<div className='wrapper'>
+		<div className="wrapper">
 			<Header />
-			<main className='main'>
+			<main className="main">
 				<Outlet />
 			</main>
 			<Footer />

@@ -33,10 +33,10 @@ const Coffee = ({ data }) => {
 
 	return (
 		<>
-			<PageHeader title='Our Coffee' />
-			<About photo={photo} title='About our beans' />
-			<section className='products'>
-				<div className='products__container container'>
+			<PageHeader title="Our Coffee" />
+			<About photo={photo} title="About our beans" />
+			<section className="products">
+				<div className="products__container container">
 					<Filter
 						serachData={data}
 						onFilterSelect={onFilterSelect}

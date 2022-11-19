@@ -26,12 +26,12 @@ function App() {
 
 	return (
 		<Routes>
-			<Route path='/' element={<Layout />}>
+			<Route path="/" element={<Layout />}>
 				<Route index element={<Homepage data={state} />} />
-				<Route path='coffee' element={<Coffee data={state} />} />
-				<Route path='goods' element={<Goods />} />
-				<Route path='coffee/product/:id' element={<SinglePage data={state} />} />
-				<Route path='*' element={<Notfoundpage />} />
+				<Route path="coffee" element={<Coffee data={state} />} />
+				<Route path="goods" element={<Goods />} />
+				<Route path="coffee/product/:id" element={<SinglePage data={state} />} />
+				<Route path="*" element={<Notfoundpage />} />
 			</Route>
 		</Routes>
 	)

@@ -1,6 +1,5 @@
 import styles from './Button.module.scss'
 
-
 {
 	/* <Button type='submit' title='Submit' disabled={!completedTodoExist}>
 	Submit
