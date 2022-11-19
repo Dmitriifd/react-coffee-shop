@@ -25,17 +25,15 @@ function App() {
 	const [state, setState] = useState(data)
 
 	return (
-		<DataContext.Provider value={state}>
-			<Routes>
-				<Route path='/' element={<Layout />}>
-					<Route index element={<Homepage data={state} />} />
-					<Route path='coffee' element={<Coffee data={state} />} />
-					<Route path='goods' element={<Goods />} />
-					<Route path='coffee/product/:id' element={<SinglePage />} />
-					<Route path='*' element={<Notfoundpage />} />
-				</Route>
-			</Routes>
-		</DataContext.Provider>
+		<Routes>
+			<Route path='/' element={<Layout />}>
+				<Route index element={<Homepage data={state} />} />
+				<Route path='coffee' element={<Coffee data={state} />} />
+				<Route path='goods' element={<Goods />} />
+				<Route path='coffee/product/:id' element={<SinglePage data={state} />} />
+				<Route path='*' element={<Notfoundpage />} />
+			</Route>
+		</Routes>
 	)
 }
 

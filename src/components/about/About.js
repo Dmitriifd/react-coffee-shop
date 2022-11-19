@@ -24,9 +24,11 @@ const About = ({ photo, title, country, price }) => {
 							calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect
 							answered followed. At it went is song that held help face.
 						</div>
-						{price ? <p className='coffee__price'>
-							<b>Price</b>: <span>{price}</span>
-						</p> : null}
+						{price ? (
+							<p className='coffee__price'>
+								<b>Price</b>: <span>{price}</span>
+							</p>
+						) : null}
 					</div>
 				</div>
 			</section>
