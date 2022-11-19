@@ -1,20 +1,8 @@
 import Card from 'components/card/Card'
 import Button from 'components/UI/button/Button'
 import Decor from 'components/UI/decor/Decro'
-import img1 from '../assets/img/product-1.jpg'
-import img2 from '../assets/img/product-2.jpg'
-import img3 from '../assets/img/product-3.jpg'
 
-export const data = [
-	{ title: 'Solimo Coffee Beans 2 kg', image: img1, price: '10.73$', country: 'Brazil', id: 1 },
-	{ title: 'Presto Coffee Beans 1 kg', image: img2, price: '15.99$', country: 'Kenya', id: 2 },
-	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia', id: 3 },
-	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Brazil', id: 4 },
-	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Kenya', id: 5 },
-	{ title: 'AROMISTICO Coffee 1 kg', image: img3, price: '6.99$', country: 'Columbia', id: 6 },
-]
-
-const Homepage = () => {
+const Homepage = ({ data }) => {
 	return (
 		<>
 			<section className='intro'>

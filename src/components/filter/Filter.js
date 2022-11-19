@@ -1,17 +1,13 @@
-import { useState } from 'react'
-
-const Filter = (props) => {
+const Filter = ({ onFilterSelect, searchValue, onChangeSearchValue }) => {
 	const buttonsData = [{ name: 'all' }, { name: 'Brazil' }, { name: 'Kenya' }, { name: 'Columbia' }]
-
-	const [value, setValue] = useState('')
 
 	return (
 		<div className='products__filter filter'>
 			<label className='filter__label'>
 				Lookiing for
 				<input
-					onChange={(e) => setValue(e.target.value)}
-					value={value}
+					value={searchValue}
+					onChange={onChangeSearchValue}
 					className='filter__input'
 					type='text'
 					placeholder='start typing here...'
@@ -20,7 +16,7 @@ const Filter = (props) => {
 			<div className='filter__btns'>
 				<p className='filter__btns-label'>Or filter</p>
 				{buttonsData.map(({ name }, i) => (
-					<button onClick={() => props.onFilterSelect(name)} key={i} className='filter__btn'>
+					<button onClick={() => onFilterSelect(name)} key={i} className='filter__btn'>
 						{name}
 					</button>
 				))}
