@@ -26,7 +26,7 @@ function App() {
 
 	return (
 		<Routes>
-			<Route path="react-coffee-shop/" element={<Layout />}>
+			<Route path="/" element={<Layout />}>
 				<Route index element={<Homepage data={state} />} />
 				<Route path="coffee" element={<Coffee data={state} />} />
 				<Route path="goods" element={<Goods />} />
