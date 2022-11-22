@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-coffee-shop/static/css/main.ccd2ee99.css",
+    "main.js": "/react-coffee-shop/static/js/main.aebe6022.js",
+    "static/media/best-bg.jpg": "/react-coffee-shop/static/media/best-bg.e73347dac8273b8cda2a.jpg",
+    "static/media/main-bg.jpg": "/react-coffee-shop/static/media/main-bg.bccd9c9f5aecec766f7f.jpg",
+    "static/media/page-bg.jpg": "/react-coffee-shop/static/media/page-bg.3602fdfebe6d51af1e5d.jpg",
+    "static/media/photo-3.jpg": "/react-coffee-shop/static/media/photo-3.efbd0b0a33809e60238d.jpg",
+    "static/media/product-2.jpg": "/react-coffee-shop/static/media/product-2.541fc7ed951848f9379c.jpg",
+    "static/media/product-1.jpg": "/react-coffee-shop/static/media/product-1.c45992a26cd5f9c00e1f.jpg",
+    "static/media/coffee-img.jpg": "/react-coffee-shop/static/media/coffee-img.5173b2c023182e4b0bc4.jpg",
+    "static/media/product-3.jpg": "/react-coffee-shop/static/media/product-3.5173b2c023182e4b0bc4.jpg",
+    "static/media/photo-2.jpg": "/react-coffee-shop/static/media/photo-2.75bdf77b5d9a601887b2.jpg",
+    "static/media/photo.jpg": "/react-coffee-shop/static/media/photo.5f7d56bfff20f52abc26.jpg",
+    "static/media/logo.svg": "/react-coffee-shop/static/media/logo.689829b4791b0abc2e641428b32bab10.svg",
+    "index.html": "/react-coffee-shop/index.html",
+    "main.ccd2ee99.css.map": "/react-coffee-shop/static/css/main.ccd2ee99.css.map",
+    "main.aebe6022.js.map": "/react-coffee-shop/static/js/main.aebe6022.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccd2ee99.css",
+    "static/js/main.aebe6022.js"
+  ]
+}
